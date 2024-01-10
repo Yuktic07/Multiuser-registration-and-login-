@@ -1,0 +1,20 @@
+{% extends 'base_generic.html' %}
+
+{% block content %}
+    <div class="form-container">
+        <h2>Login</h2>
+        <form method="post" action="{% url 'login' %}">
+            {% csrf_token %}
+            <div style="margin-bottom: 10px;"> <!-- Add margin-bottom style -->
+                <label for="{{ login_form.username.id_for_label }}">Username:</label>
+                {{ login_form.username }}
+            </div>
+            <div style="margin-bottom: 10px;"> <!-- Add margin-bottom style -->
+                <label for="{{ login_form.password.id_for_label }}">Password:</label>
+                {{ login_form.password }}
+            </div>
+            <button type="submit" style="background-color: #eebbc3; color: #232946; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">Login</button>
+        </form>
+        <p>Don't have an account? <a href="{% url 'register' %}">Register</a></p>
+    </div>
+{% endblock %}

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}YD Hospital{% endblock %}</title>
+    {% load static %}
+      <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #b8c1ec;
+            margin: 0;
+            text-align: center;
+        }
+
+        header {
+            background-color: #232946;
+            color: #fff;
+            padding: 10px;
+            box-sizing: border-box;
+        }
+
+        h1 {
+            margin: 0;
+        }
+
+        main {
+            width: 100%;
+            box-sizing: border-box;
+            padding: 20px;
+            text-align: left; /* Adjust text alignment as needed */
+            display: inline-block; /* Center horizontally */
+        }
+
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Welcome To YD Hospital</h1>
+        <!-- Add your navigation links here -->
+       
+    </header>
+    <main>
+        {% block content %}{% endblock %}
+    </main>
+</body>
+</html>
